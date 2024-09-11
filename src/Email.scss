@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main-container{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100vw;
+}
+
+.email-container{
+    z-index: 0;
+    display:grid;
+    grid-template-columns: [icons] 10% [title] 20% [heading] 20% [content] 40% [date] 10%;
+    align-items: center;
+    
+    background-color: white;
+    border: rgba(0, 0, 0) solid 1px;
+    border-radius: 5px;
+
+    width: 90%;
+    height: 50px;
+
+    overflow: hidden;
+    transition: all 0.3s;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: 1px 5px rgba(0, 0, 0, 0.397);
+        z-index: 1;
+        transform: scale(1.005);
+    }
+}
+
+.icon-container{
+    display: flex;
+
+    justify-content: space-evenly;
+}
+
+.icon {
+    height: 30px;
+    padding: 10px;
+
+    &:hover {
+        cursor: pointer;
+
+        background-color: #b3dffa;
+        border-radius: 50%;
+    }
+}
+
+.date{
+    padding-right: 15px; 
+    text-align: right;
+}
+
+.content{
+    color: grey;
+    height: 20px;
+    overflow: hidden;
+}
+
+.title{
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.hovermenu-container{
+    display: flex;
+    align-items: center;
+    height: 50px;
+
+    button{
+        height: fit-content;
+    }
+}
+
+.menu-btn{
+    background-color: hsl(0, 0, 0, 0);
+    border: none;
+}
